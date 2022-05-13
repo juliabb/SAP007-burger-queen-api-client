@@ -1,0 +1,40 @@
+.main{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content:center;
+}
+
+.container{
+    background-color: rgba(255, 255, 255, 0.235);
+    width: 30vw;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    padding-bottom: 40px;
+}
+
+.container,h1{
+    margin: 20px;
+}
+
+input{
+    margin: 0 2% 2% 2%;
+    padding: 2.5%;
+    border-radius: 50px;
+    border: none;
+    width: 70%;
+}
+
+button{
+    width: 70%;
+    padding: 2.5%;
+    border-radius: 50px;
+    border: none;
+    color: #fff;
+    background: #000;
+    font-size: 1em;
+}
