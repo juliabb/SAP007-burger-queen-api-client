@@ -1,40 +1,38 @@
-.main{
+.main {
     display: flex;
-    width: 100vw;
     height: 100vh;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
 }
 
-.container{
-    background-color: rgba(255, 255, 255, 0.235);
-    width: 30vw;
+.container {
+    background-color: rgba(255, 255, 255, 0.324);
     border-radius: 10px;
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     flex-direction: column;
-    padding-bottom: 40px;
+    padding: 3.5% 0;
 }
 
-.container,h1{
-    margin: 5px 20px 20px 20px;
+h1{
+    padding: 15px 20px 30px 20px;
 }
 
 input{
-    margin: 0 2% 2% 2%;
-    padding: 2.5%;
+    margin: 0 2.5% 2.5% 2.5%;
+    padding: 3.5%;
     border-radius: 50px;
     border: none;
-    width: 70%;
+    width: 80%;
 }
 
 button{
-    width: 70%;
-    padding: 2.5%;
+    width: 80%;
+    padding: 3.5%;
     border-radius: 50px;
     border: none;
     color: #fff;
     background: #000;
     font-size: 1em;
-}
+}  
