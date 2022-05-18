@@ -5,6 +5,7 @@ import LoginPage from "./Pages/LoginPage";
 import Kitchen from "./Pages/Kitchen"
 import Salon from "./Pages/Salon"
 import NoPage from "./Pages/NoPage"
+import Register from "./Pages/LoginPage/Register";
 
 import { AuthProvider, AuthContext } from "./Contexts/auth";
 
@@ -31,6 +32,7 @@ const AppRoutes = () => {
               <Salon />
             </Private>
           } />
+          <Route exact path="/register" element={<Register />} />
           <Route exact path="*" element={<NoPage />} />
         </Routes>
       </AuthProvider>

@@ -37,12 +37,4 @@ input{
     padding: 5%;
 }
 
-.button{
-    width: 90%;
-    padding: 5%;
-    border-radius: 50px;
-    border: none;
-    color: #fff;
-    background: #000;
-    font-size: 1em;
-}
+
