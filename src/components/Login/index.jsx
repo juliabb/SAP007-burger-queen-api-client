@@ -24,7 +24,7 @@ function Login() {
             <input type="email" placeholder="Email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
             <input type="password" placeholder="Senha" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
             <Button />
-            <Link to="/register">Cadastre-se</Link>
+            <p>Não possui conta? <Link to="/register" className="register">Cadastre-se</Link></p>
         </form>
     )
 }

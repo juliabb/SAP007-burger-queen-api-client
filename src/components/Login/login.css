@@ -1,17 +1,17 @@
-.form{
+.form {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    }
-    
-    .form,input{
-        margin: 0 2.5% 2.5% 2.5%;
-        border-radius: 50px;
-        border: none;
-        width: 90%;
-    }
-    
-    input{
-        padding: 5%;
-    }
+}
+
+.form, input {
+    margin: 0 2.5% 2.5% 2.5%;
+    border-radius: 50px;
+    border: none;
+    width: 90%;
+}
+
+input {
+    padding: 5%;
+}
