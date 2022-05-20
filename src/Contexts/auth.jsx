@@ -8,7 +8,11 @@ export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
 
     const login = (email, password) => {
-        console.log("login auth", { email, password });
+       
+        // const loggedUser ={
+        //     id:"123",
+        //     email,
+        // }
 
         if (password === "123456") {
             setUser({ id: "123", email });
