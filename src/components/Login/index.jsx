@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react";
 import { AuthContext } from "../../Contexts/auth";
-// import { createSession } from "../../Pages/services/data";
 import Button from "../../components/Button";
 import { Link } from "react-router-dom";
 import './login.css'
