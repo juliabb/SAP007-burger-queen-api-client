@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { AuthContext } from "../../Contexts/auth";
+// import { createSession } from "../../Pages/services/data";
 import Button from "../../components/Button";
 import { Link } from "react-router-dom";
 import './login.css'
@@ -14,7 +15,7 @@ function Login() {
     const buttonSubmit = (e) => {
         e.preventDefault();
 
-        console.log("submit", { email, password });
+        // console.log("submit", { email, password });
         login(email, password)
     }
 

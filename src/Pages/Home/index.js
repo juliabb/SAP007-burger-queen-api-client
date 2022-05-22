@@ -1,7 +1,13 @@
-function Home() {
-    return(
-        <h1>Home</h1>
-    )
-}
+// import ButtonLogout from "../../components/Button/Button-logout"
 
-export default Home
+// function HomePage() {
+
+//     return (
+//         <div>
+//             <h1>Home</h1>
+//             <ButtonLogout />
+//         </div>
+//     )
+// }
+
+// export default HomePage

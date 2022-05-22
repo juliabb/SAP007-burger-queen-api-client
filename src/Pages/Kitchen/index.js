@@ -1,6 +1,10 @@
+
+import ButtonLogout from "../../components/Button/Button-logout"
 function Kitchen() {
-return(
+    return (<div>
         <h1>Kitchen</h1>
+        <ButtonLogout />
+    </div>
     )
 }
 
