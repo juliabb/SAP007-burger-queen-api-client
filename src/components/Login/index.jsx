@@ -1,12 +1,10 @@
-import React, { useState, useContext } from "react";
-import { AuthContext } from "../../Contexts/auth";
+import React, { useState } from "react";
+import { signIn } from "../../Pages/services/data";
 import Button from "../../components/Button";
 import { Link } from "react-router-dom";
 import './login.css'
 
 function Login() {
-
-    const { authenticated, login } = useContext(AuthContext);
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -14,13 +12,26 @@ function Login() {
     const buttonSubmit = (e) => {
         e.preventDefault();
 
-        // console.log("submit", { email, password });
-        login(email, password)
-    }
+        signIn(email, password).then((response) => {
+            if (response.code === 400) {
+                console.log("E-mail ou senha inválidos");
+            } else {
+                localStorage.setItem('token', response.token);
+                localStorage.setItem('id', response.id);
+                if (response.role === "hall") {
+                    // return <Navigate to="/hall" />
+                }
+                else if (response.role === "kitchen") {
+                    //  navigate("/kitchen")
+                }
+            }
+        }).catch((error) => {
+            console.log(error)
+        })
+    };
 
     return (
         <form className="form" onSubmit={buttonSubmit}>
-            <p>{String(authenticated)}</p>
             <input type="email" placeholder="Email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
             <input type="password" placeholder="Senha" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
             <Button />

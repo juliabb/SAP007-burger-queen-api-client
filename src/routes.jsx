@@ -11,19 +11,19 @@ import Register from "./Pages/LoginPage/Register";
 import { AuthProvider, AuthContext } from "./Contexts/auth";
 
 const AppRoutes = () => {
-   const Private = ({ children }) => { 
-     const { authenticaded, loading } = useContext(AuthContext);
-  //   const { authenticaded, loading } = useContext(AuthContext); //Verificar se esta autenticação
-   
-     if (loading) {
-       return <div className="loading">Carregando...</div> // Css aqui
-     }
-    
-     if (!authenticaded) { //se usuario não autenticado enviar para Login
-       return <Navigate to="/login" />;
-     }
-     return children; //se usuario autenticado acessa a rota privada
-   }
+  const Private = ({ children }) => {
+    const { authenticaded, loading } = useContext(AuthContext);
+    //   const { authenticaded, loading } = useContext(AuthContext); //Verificar se esta autenticação
+
+    if (loading) {
+      return <div className="loading">Carregando...</div> // Css aqui
+    }
+
+    if (!authenticaded) { //se usuario não autenticado enviar para Login
+      return <Navigate to="/login" />;
+    }
+    return children; //se usuario autenticado acessa a rota privada
+  }
   return (
     <Router>
       <AuthProvider>

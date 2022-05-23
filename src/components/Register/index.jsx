@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import { createNewUser } from "../../Pages/services/data"
-
 import { Navigate } from "react-router-dom";
 import Button from "../Button";
 import './register.css'
 
-
 function Register() {
-
+  
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [name, setName] = useState("");

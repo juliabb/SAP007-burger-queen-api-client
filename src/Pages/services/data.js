@@ -17,43 +17,19 @@ export const createNewUser = async (name, email, password, role) => {
       })
   };
 
-
-
-//   export const signIn = async (email, password) => {
-//     return await fetch('https://lab-api-bq.herokuapp.com/auth', {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//       body: JSON.stringify({
-//         email: email,
-//         password: password
-//       })
-//     }).then(res => res.json())
-//       .catch((error) => {
-//         console.log(error)
-//       })
-//   };
-
-
-
-// export const createSession = (email, password) => {
-//     return fetch(url,{
-//         method: "POST",
-//         headers: {
-//             "Content-Type": "application/json"
-//         },
-//         body: JSON.stringify({
-//             email: email,
-//             password: password,
-//         })
-//     })
-//     .then(function(response){
-//         console.log(response);
-//         console.log(response.status); 
-//     })
-//     .then(response => response.json())
-//     .catch(error => console.error(error))
-// }
-
+  export const signIn = async (email, password) => {
+        return await fetch('https://lab-api-bq.herokuapp.com/auth', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: email,
+        password: password
+      })
+    }).then(res => res.json())
+      .catch((error) => {
+        console.log(error)
+      })
+  };
 
