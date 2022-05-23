@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { createNewUser } from "../../Pages/Services/data"
 import { useNavigate } from "react-router-dom";
-import Button from "../Button";
+import { validEmail, validPassword } from "../../Pages/Authentication";
 import './register.css'
+
 
 function FormRegister() {
   
@@ -18,7 +19,7 @@ function FormRegister() {
         createNewUser(name, email, password, role)
         .then((response) => {
           if (response.code === 403) {
-        console.log("Email já cadastrado!");
+        console("Email já cadastrado!");
           } else {
             localStorage.setItem('token', response.token);
             localStorage.setItem('id', response.id);
@@ -38,6 +39,16 @@ function FormRegister() {
         });
 
     }
+
+    const validate = () => {
+      if (!validEmail.test(email)) {
+         alert("Email Valido");
+      }
+      if (!validPassword.test(password)) {
+         alert("Senha Valido");
+      }
+   };
+
     return (
         <form className="form" onSubmit={buttonSubmit}>
             <input type="radio" name="role" value="kitchen" className="role" onChange={(e) => setRole(e.target.value)} />
@@ -47,7 +58,7 @@ function FormRegister() {
             <input type="text" placeholder="Name" name="name" value={name} onChange={(e) => setName(e.target.value)} />
             <input type="email" placeholder="Email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
             <input type="password" placeholder="Senha" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-            <Button />
+            <button onclick={validate} className="buttonSubmit">Entrar</button>
         </form>
     )
 }

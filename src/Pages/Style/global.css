@@ -9,3 +9,13 @@ body{
     background: rgb(32,171,211);
     background:  radial-gradient(circle, #00c0fa 35%, #015eea 100%);
 }
+
+.buttonSubmit{
+    width: 90%;
+    padding: 5%;
+    border-radius: 50px;
+    border: none;
+    color: #fff;
+    background: #000;
+    font-size: 1em;
+}

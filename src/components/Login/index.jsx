@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { signIn } from "../../Pages/Services/data";
-import Button from "../../components/Button";
+import { validEmail, validPassword } from "../../Pages/Authentication";
 import { Link, useNavigate } from "react-router-dom";
-import './login.css'
 
 function Login() {
 
@@ -35,11 +34,20 @@ function Login() {
         })
     };
 
+    const validate = () => {
+        if (!validEmail.test(email)) {
+           alert("Email invalido");
+        }
+        if (!validPassword.test(password)) {
+           alert("Senha Invalida");
+        }
+     };
+
     return (
         <form className="form" onSubmit={buttonSubmit}>
             <input type="email" placeholder="Email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
             <input type="password" placeholder="Senha" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-            <Button />
+            <button onClick={validate} className="buttonSubmit">Entrar</button>
             <p>Não possui conta? <Link to="/register" className="register">Cadastre-se</Link></p>
         </form>
     )
