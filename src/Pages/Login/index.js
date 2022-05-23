@@ -1,7 +1,7 @@
 import Login from "../../components/Login";
 import ButtonLogout from "../../components/Button/Button-logout";
 
-import './LoginPage.css'
+import './Login.css'
 import LogoBurguer from "../../components/LogoBurguer";
 
 const LoginPage = () => {
@@ -12,7 +12,7 @@ const LoginPage = () => {
                 <LogoBurguer />
                 <h1>Login</h1>
                 <Login />
-                <ButtonLogout />
+                {/* <ButtonLogout /> */}
             </div>
         </div>
     )

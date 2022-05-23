@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-import { createNewUser } from "../../Pages/services/data"
-import { Navigate } from "react-router-dom";
+import { createNewUser } from "../../Pages/Services/data"
+import { useNavigate } from "react-router-dom";
 import Button from "../Button";
 import './register.css'
 
-function Register() {
+function FormRegister() {
   
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [name, setName] = useState("");
     const [role, setRole] = useState("");
+    const navigate = useNavigate()
 
     const buttonSubmit = (e) => {
         e.preventDefault();
@@ -21,12 +22,14 @@ function Register() {
           } else {
             localStorage.setItem('token', response.token);
             localStorage.setItem('id', response.id);
+            localStorage.setItem('email', response.email);
+            localStorage.setItem('role', response.role);
   
             if (response.role === "hall") {
-                return <Navigate to="/Salon" />;
+              navigate("/salon")
             }
             else if (response.role === "kitchen") {
-                return <Navigate to="/kitchen" />;
+              navigate("/kitchen")
             }
           }
         })
@@ -49,4 +52,4 @@ function Register() {
     )
 }
 
-export default Register
+export default FormRegister

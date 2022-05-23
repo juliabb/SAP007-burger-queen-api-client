@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import { signIn } from "../../Pages/services/data";
+import { signIn } from "../../Pages/Services/data";
 import Button from "../../components/Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './login.css'
 
 function Login() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate()
 
     const buttonSubmit = (e) => {
         e.preventDefault();
@@ -18,11 +19,15 @@ function Login() {
             } else {
                 localStorage.setItem('token', response.token);
                 localStorage.setItem('id', response.id);
+                localStorage.setItem('email', response.email);
+                localStorage.setItem('role', response.role);
+
                 if (response.role === "hall") {
-                    // return <Navigate to="/hall" />
+                    console.log(response.role);
+                    navigate("/salon")
                 }
                 else if (response.role === "kitchen") {
-                    //  navigate("/kitchen")
+                    navigate("/kitchen");
                 }
             }
         }).catch((error) => {

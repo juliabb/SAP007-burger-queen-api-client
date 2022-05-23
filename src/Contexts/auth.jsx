@@ -1,6 +1,6 @@
 import React, { useState, useEffect, createContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { signIn } from '../Pages/services/data';
+import { signIn } from '../Pages/Services/data';
 
 export const AuthContext = createContext();
 
@@ -21,7 +21,7 @@ export const AuthProvider = ({ children }) => {
         localStorage.removeItem("token")
         navigate("/login")
     };
-    
+
     return (
         <AuthContext.Provider
             value={{ authenticated: !!user, user, loading, signIn, logout }}

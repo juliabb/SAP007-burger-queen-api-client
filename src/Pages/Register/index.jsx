@@ -1,8 +1,7 @@
-import LogoBurguer from "../../../components/LogoBurguer";
-import Register from "../../../components/Register";
+import LogoBurguer from "../../components/LogoBurguer";
+import Register from "../../components/Register";
 
 function RegisterPage() {
-
     return(
         <div className='main'>
         <div className='container'>
