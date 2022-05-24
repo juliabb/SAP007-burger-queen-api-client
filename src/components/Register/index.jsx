@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { createNewUser } from "../../Pages/Services/data"
+import { createNewUser } from "../../Pages/services/data"
 import { useNavigate } from "react-router-dom";
 import { validEmail, validPassword } from "../../Pages/Authentication";
 import './register.css'

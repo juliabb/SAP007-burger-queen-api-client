@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { signIn } from "../../Pages/Services/data";
+import { signIn } from "../../Pages/services/data";
 import { validEmail, validPassword } from "../../Pages/Authentication";
 import { Link, useNavigate } from "react-router-dom";
 
