@@ -1,35 +1,35 @@
 export const createNewUser = async (name, email, password, role) => {
-    return await fetch('https://lab-api-bq.herokuapp.com/users', {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        name: name,
-        email: email,
-        password: password,
-        role: role,
-        restaurant: "Mr Simpsons",
-      }),
-    }).then(res => res.json())
-      .catch((error) => {
-        console.log(error)
-      })
-  };
+  return await fetch('https://lab-api-bq.herokuapp.com/users', {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      name: name,
+      email: email,
+      password: password,
+      role: role,
+      restaurant: "Mr Simpsons",
+    }),
+  }).then(res => res.json())
+    .catch((error) => {
+      console.log(error)
+    })
+};
 
-  export const signIn = async (email, password) => {
-        return await fetch('https://lab-api-bq.herokuapp.com/auth', {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email: email,
-        password: password
-      })
-    }).then(res => res.json())
-      .catch((error) => {
-        console.log(error)
-      })
-  };
+export const signIn = async (email, password) => {
+      return await fetch('https://lab-api-bq.herokuapp.com/auth', {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      email: email,
+      password: password
+    })
+  }).then(res => res.json())
+    .catch((error) => {
+      console.log(error)
+    })
+};
 
