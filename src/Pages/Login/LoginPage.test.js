@@ -1,16 +1,21 @@
 '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-// import { LoginPage } from "./index"
-import { Login } from "../../components/Login"
+import user from '@testing-library/user-event';
 
+describe('Login', () => {
 
-describe('Tests for Form Login', () => {
-    it('should render one button and two inputs', () => {
-        render(<Login />);
-        const button = screen.getByText('entrar');
-        expect(button).toBeInTheDocument();
+      it('should trigger a click function', () => {
+      const text = 'Entrar'
+      const onClick = jest.fn();
+      render(<button onClick={onClick}>{text}</button>);
+  
+      expect(onClick).toHaveBeenCalledTimes(0);
+      user.click(screen.getByText(text));
+      expect(onClick).toHaveBeenCalledTimes(1);
     });
+  });
 
-});
+
+
 
 
