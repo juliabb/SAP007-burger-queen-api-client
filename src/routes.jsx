@@ -21,7 +21,7 @@ const AppRoutes = () => {
         <Route
           path="/home"
           element={
-            <Private redirectTo="/login">
+            <Private redirectTo="/">
               <Home />
             </Private>
           }
@@ -29,7 +29,7 @@ const AppRoutes = () => {
         <Route
           path="/kitchen"
           element={
-            <Private redirectTo="/login">
+            <Private redirectTo="/">
               <Kitchen />
             </Private>
           }
@@ -37,12 +37,12 @@ const AppRoutes = () => {
         <Route
           path="/salon"
           element={
-            <Private redirectTo="/login">
+            <Private redirectTo="/">
               <Salon />
             </Private>
           }
         />
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="*" element={<NoPage />} />
       </Routes>

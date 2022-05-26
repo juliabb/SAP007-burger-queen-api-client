@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+/* import React, { useContext } from "react";
 import { AuthContext } from "../../../Contexts/auth"
 
 function ButtonLogout() {
@@ -11,4 +11,4 @@ function ButtonLogout() {
         <button onClick={handleLogout}>Sair</button>
     )
 }
-export default ButtonLogout
+export default ButtonLogout */
