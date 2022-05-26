@@ -32,4 +32,3 @@ export const signIn = async (email, password) => {
       console.log(error)
     })
 };
-
