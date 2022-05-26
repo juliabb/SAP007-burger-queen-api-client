@@ -1,18 +1,16 @@
 import Login from "../../components/Login";
-import ButtonLogout from "../../components/Button/Button-logout";
-
+import logo from "../../Pages/Style/Images/logo-.png"
+import Imagem from "../../components/Logo";
 import './login-page.css'
-import LogoBurguer from "../../components/LogoBurguer";
 
 const LoginPage = () => {
   
     return (
         <div className='main'>
             <div className='container'>
-                <LogoBurguer />
+                <Imagem nome="Logo-buguer" foto={logo} />
                 <h1 className="h1">Login</h1>
                 <Login />
-                {/* <ButtonLogout /> */}
             </div>
         </div>
     )

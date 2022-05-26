@@ -19,7 +19,7 @@ function Login() {
 
         signIn(email, password)
             .then((response) => {
-                if (response.code === 200) { //<<<<<<<<<<<<<<<<<<<<<<<<<<<< MUDAR PARA 400 
+                if (response.code === 400) { 
                     console.log("E-mail ou senha inválidos");
                 }
                 else {
