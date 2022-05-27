@@ -42,10 +42,10 @@ function FormRegister() {
 
   const validate = () => {
     if (!validEmail.test(email)) {
-      alert("Email Valido");
+      alert("Email Invalido");
     }
     if (!validPassword.test(password)) {
-      alert("Senha Valido");
+      alert("Senha Invalido");
     }
   };
 
