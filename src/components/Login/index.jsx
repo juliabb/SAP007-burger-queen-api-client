@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { signIn } from "../../Pages/services/data";
-import { validEmail, validPassword } from "../../Pages/Authentication";
+import { validateEmail, validatePassword } from "../../Pages/Authentication";
 import { Link, useNavigate } from "react-router-dom";
-import Errors from "../../Pages/Error/error";
+import { Errors } from "../../Pages/Error/error"
 import MessageError from "../Message";
 import './login.css'
 
@@ -16,11 +16,11 @@ function Login() {
     const buttonSubmit = (e) => {
         e.preventDefault();
 
-
         signIn(email, password)
             .then((response) => {
-                if (response.code === 200) { 
-                    console.log("E-mail ou senha inválidos");
+                if (response.code === 400) { 
+                    const codeError = JSON.parse(response.code)
+                    setError(Errors(codeError))
                 }
                 else {
                     localStorage.setItem('token', response.token);
@@ -33,25 +33,22 @@ function Login() {
                     }
                     else if (response.role === "kitchen") {
                         navigate("/kitchen");
-                    }
-                    console.log(response.code);
-                    setError(Errors(response.code))
+                    }                    
                 }
             }).catch((error) => console.log(error))
     };
 
     const validate = () => {
-        if (!validEmail.test(email)) {
-            //    alert("Email invalido");
+        if (!validateEmail(email)) {
+            // console.log("Email invalido");
         }
-        if (!validPassword.test(password)) {
-            //    alert("Senha Invalida");
+        if (!validatePassword(password)) {
+            // console.log("Senha Invalida");
         }
     };
 
     return (
         <form className="form" onSubmit={buttonSubmit}>
-            {/* {message && <Message type="error" msg={message} />} */}
             {error && <MessageError type="error" msg={error} />}
             <input type="email" placeholder="Email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
             <input type="password" placeholder="Senha" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
