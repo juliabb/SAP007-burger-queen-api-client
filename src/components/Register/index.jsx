@@ -34,9 +34,7 @@ function FormRegister() {
           }
         }
       })
-      .catch((errors) => {
-        console.log(errors)
-      });
+      .catch((errors) => errors )
 
   }
 
