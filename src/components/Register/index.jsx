@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { createNewUser } from "../../Pages/services/data"
 import { useNavigate } from "react-router-dom";
-import { validEmail, validPassword } from "../../Pages/Authentication";
+import { validateEmail, validatePassword } from "../../Pages/Authentication";
 import './register.css'
 
 
@@ -41,26 +41,26 @@ function FormRegister() {
   }
 
   const validate = () => {
-    if (!validEmail.test(email)) {
-      alert("Email Valido");
+    if (!validateEmail(email)) {
+        // console.log("Email invalido");
     }
-    if (!validPassword.test(password)) {
-      alert("Senha Valido");
+    if (!validatePassword(password)) {
+        // console.log("Senha Invalida");
     }
-  };
+};
 
   return (
     <form className="form" onSubmit={buttonSubmit}>
       <div className="radio">
         <input type="radio" name="role" value="kitchen" id="kitchen" className="role" onChange={(e) => setRole(e.target.value)} />
-        <label for="kitchen"><span></span>Cozinha</label>
+        <label htmlFor="kitchen"><span></span>Cozinha</label>
         <input type="radio" name="role" value="hall" id="hall" className="role" onChange={(e) => setRole(e.target.value)} />
-        <label for="hall"><span></span>Atendimento</label>
+        <label htmlFor="hall"><span></span>Atendimento</label>
       </div>
       <input type="text" placeholder="Name" name="name" value={name} onChange={(e) => setName(e.target.value)} />
       <input type="email" placeholder="Email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
       <input type="password" placeholder="Senha" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      <button onclick={validate} className="buttonSubmit">Entrar</button>
+      <button onClick={validate} className="buttonSubmit">Entrar</button>
     </form>
   )
 }

@@ -1,5 +1,5 @@
-function Errors(response) {
-    switch (response.code) {
+export function Errors(codeError) {
+    switch (codeError) {
         case 400:
             return "Dados inválidos ou ausentes";
         case 401:
@@ -13,7 +13,7 @@ function Errors(response) {
     }
 }
 
-export default Errors
+
 
 
 

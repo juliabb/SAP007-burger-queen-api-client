@@ -10,7 +10,7 @@ import Home from "./Pages/Home";
 
 const Private = ({ children, redirectTo }) => {
   const isAuthenticated = localStorage.getItem("token") !== null;
-  console.log("isAuth: ", isAuthenticated);
+  // console.log("isAuth: ", isAuthenticated);
   return isAuthenticated ? children : <Navigate to={redirectTo} />;
 };
 

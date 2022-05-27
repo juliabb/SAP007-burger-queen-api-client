@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { signIn } from "../../Pages/services/data";
-import { validEmail, validPassword } from "../../Pages/Authentication";
+import { validateEmail, validatePassword } from "../../Pages/Authentication";
 import { Link, useNavigate } from "react-router-dom";
-import Errors from "../../Pages/Error/error";
+import { Errors } from "../../Pages/Error/error"
 import MessageError from "../Message";
 import './login.css'
 
@@ -16,12 +16,11 @@ function Login() {
     const buttonSubmit = (e) => {
         e.preventDefault();
 
-
         signIn(email, password)
             .then((response) => {
                 if (response.code === 400) { 
-                    setError(Errors(response.code))
-                    console.log(response.code);
+                    const codeError = JSON.parse(response.code)
+                    setError(Errors(codeError))
                 }
                 else {
                     localStorage.setItem('token', response.token);
@@ -40,11 +39,11 @@ function Login() {
     };
 
     const validate = () => {
-        if (!validEmail.test(email)) {
-            //    alert("Email invalido");
+        if (!validateEmail(email)) {
+            // console.log("Email invalido");
         }
-        if (!validPassword.test(password)) {
-            //    alert("Senha Invalida");
+        if (!validatePassword(password)) {
+            // console.log("Senha Invalida");
         }
     };
 
