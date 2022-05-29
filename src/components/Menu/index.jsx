@@ -3,8 +3,8 @@ import "./menu.css"
 function Menu() {
     return (
         <div className="container-menu">
-            <section className="menu"><h3 className="center">MENU</h3></section>
-            <section className="menu"><h3 className="center">PEDIDO</h3></section>
+            <section className="menu"><h2 className="center">Cardápio</h2></section>
+            <section className="menu"><h2 className="center">Pedido</h2></section>
         </div>
     )
 }
