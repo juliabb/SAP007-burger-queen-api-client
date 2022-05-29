@@ -1,0 +1,19 @@
+.container-menu{
+    display: flex;
+    margin: 1% 4%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    align-content: center;
+    gap: 3%
+}
+
+.menu{
+    background-color: #ffffff76;
+    width: 48%;
+    height: 66vh;
+    border-radius: 10px;
+    padding: 2%;
+    align-items: center;
+}
+

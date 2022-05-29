@@ -1,0 +1,9 @@
+.container-top{
+    display: flex;
+    justify-content: center;
+}
+
+.mr-simpsons{
+    width: 20%;
+    margin-top: -5%;
+}

@@ -1,5 +1,6 @@
 import Login from "../../components/Login";
 import logo from "../../Pages/Style/Images/logo-.png"
+import Footer from "../../components/Footer";
 import Imagem from "../../components/Logo";
 import './login-page.css'
 
@@ -11,6 +12,7 @@ const LoginPage = () => {
                 <Imagem nome="Logo-buguer" foto={logo} />
                 <h1 className="h1">Login</h1>
                 <Login />
+                <Footer />
             </div>
         </div>
     )

@@ -1,4 +1,4 @@
-.button{
+.button {
     width: 90%;
     padding: 5%;
     border-radius: 50px;
@@ -6,4 +6,19 @@
     color: #fff;
     background: #000;
     font-size: 1em;
+}
+
+.container-logout {
+    display: flex;
+    justify-content: right;
+    padding: 2% 3% 2% 2%;
+}
+
+.logout {
+    outline: none;
+    font-size: 1.4em;
+    border: none;
+    text-decoration: underline;
+    background: #00c0fa00;
+    cursor: pointer;
 }
