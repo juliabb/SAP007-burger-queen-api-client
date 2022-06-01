@@ -10,8 +10,6 @@ export const logout = () => {
 
         navigate("/login")
     };
-
-// export const token = localStorage.getItem("token")
     
 export const getToken = (() => localStorage.getItem("token"));
 // console.log(token);

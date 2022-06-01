@@ -1,5 +1,5 @@
-import { logout } from "../../../Contexts/auth";
- import '../../Button/button.css'
+import { logout } from "../../Contexts/auth";
+import "../Logout/logout.css"
 
 function ButtonLogout() {
     

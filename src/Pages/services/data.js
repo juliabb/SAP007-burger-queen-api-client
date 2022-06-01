@@ -50,24 +50,3 @@ export const allProducts = () => {
   })
 };
 
-
-// export const getOptions = {
-// method: "GET",
-// headers: {
-//   "Content-Type": "application/json",
-//   Authorization: token,
-// },
-// };
-
-
-// export const AllProduts = async () => {
-//   fetch(apiProducts, getOptions)
-// .then((res) => res.json())
-// .then((data) => {
-//   console.log(data)
-//   return data;
-// })
-
-// };
-
-

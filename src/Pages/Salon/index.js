@@ -1,10 +1,10 @@
 import Header from "../../components/Header"
-import ButtonLogout from "../../components/Button/Button-logout"
 import Footer from "../../components/Footer"
 import Menu from "../../components/Menu"
+
 import { allProducts } from "../services/data"
 import { useEffect, useState } from "react"
-
+import Logout from "../../components/Logout"
 
 function Salon() {
 
@@ -12,10 +12,10 @@ function Salon() {
 
     const showAllProducts = (option) => {
         allProducts()
-        .then((response) => response.json())
-        .then(json => json)
-        .then((data) => {setProducts(data.filter((item) => {return item.type === option}),);});
-        console.log(showAllProducts);
+            .then((response) => response.json())
+            .then(json => json)
+            .then((data) => { setProducts(data.filter((item) => { return item.type === option }),); });
+        // console.log(showAllProducts);
     };
     useEffect(() => {
         showAllProducts("breakfast")
@@ -23,9 +23,10 @@ function Salon() {
 
     return (
         <div>
-            <button onClick={()=> showAllProducts("breakfast")}>Café</button>
-            <button onClick={()=> showAllProducts("all-day")}>Lanche</button>
-            <ButtonLogout />
+            <button onClick={() => showAllProducts("breakfast")}>Café</button>
+            <button onClick={() => showAllProducts("all-day")}>Lanche</button>
+
+           <Logout />
             <Header />
             <p> Menu: {products.forEach(product => console.log(product))}</p>
             <Menu />
