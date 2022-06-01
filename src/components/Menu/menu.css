@@ -5,7 +5,7 @@
     align-items: center;
     flex-direction: row;
     align-content: center;
-    gap: 8%
+    gap: 8%;
 }
 
 .menu{
@@ -13,7 +13,37 @@
     width: 40%;
     height: 64vh;
     border-radius: 10px;
-    padding: 2%;
+    /* padding: 2%; */
     align-items: center;
 }
 
+h2{
+    padding: 2%;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #ffffff00;
+    overflow: auto;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .navbar a {
+    float: left;
+    padding: 3%;
+    color: yellow;
+    text-shadow:#000 1px -1px, #000 -1px 1px, #000 1px 1px, #000 -1px -1px;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    width: 50%; 
+    text-align: center;
+  }
+  
+  .navbar a:hover {
+    background-color: rgba(0, 0, 0, 0.352);
+  }
+  
+  .navbar a.active {
+    background-color: rgba(0, 0, 0, 0.352);
+  }
