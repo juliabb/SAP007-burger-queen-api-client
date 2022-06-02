@@ -1,8 +1,4 @@
 import { getToken } from "../../Contexts/auth";
-// const url = 'https://lab-api-bq.herokuapp.com';
-// const apiProducts = `${url}/products/`;
-// const token = getToken()
-
 
 export const createNewUser = async (name, email, password, role) => {
   return await fetch('https://lab-api-bq.herokuapp.com/users', {

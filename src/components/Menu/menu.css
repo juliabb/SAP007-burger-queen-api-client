@@ -6,6 +6,7 @@
   flex-direction: row;
   align-content: center;
   gap: 8%;
+  flex-wrap: wrap-reverse;
 }
 
 .menu {
@@ -15,6 +16,16 @@
   border-radius: 10px;
   /* padding: 2%; */
   align-items: center;
+}
+
+.command {
+  background-color: rgba(255, 255, 255, 0.297);
+  width: 40%;
+  height: 64vh;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 h2 {
@@ -42,19 +53,74 @@ padding: 0 0 3% 3%;
   text-decoration: none;
   width: 50%;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.297);
+  border: none;
 }
 
-.navbar a:hover {
+.navbar button:hover {
   background-color: rgba(0, 0, 0, 0.352);
 }
 
-.navbar a.active {
+.navbar button.active {
   background-color: rgba(0, 0, 0, 0.352);
 }
 
 .clientName {
-  position: relative;
   padding: 2%;
   border-radius: 5px;
   width: 90%;
+}
+
+.command button{
+  width: 90%;
+  padding: 9px;
+  margin-top: 2%;
+  border-radius: 5px;
+  background-color: yellow;
+  font-weight: 700;
+  border: none;
+}
+
+@media screen and (max-width:1000px) {
+
+  .container-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .menu {
+    width: 80%;
+  }
+  
+  .command {
+    width: 80%;
+  }
+
+}
+
+
+@media screen and (max-width:768px) {
+
+  .container-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+.menu {
+  width: 80%;
+}
+
+.command {
+  width: 80%;
+}
+
+}
+
+@media screen and (max-width: 450px) {
+
+button{
+    font-size: 0.7em;
+  }
+
 }

@@ -1,10 +1,9 @@
 import Header from "../../components/Header"
 import Footer from "../../components/Footer"
 import Menu from "../../components/Menu"
-
 import { allProducts } from "../services/data"
 import { useEffect, useState } from "react"
-import Logout from "../../components/Logout"
+import LinkButton from "../../components/Linkbutton"
 
 function Salon() {
 
@@ -23,12 +22,13 @@ function Salon() {
 
     return (
         <div>
-            <button onClick={() => showAllProducts("breakfast")}>Café</button>
-            <button onClick={() => showAllProducts("all-day")}>Lanche</button>
+            {/* <button onClick={() => showAllProducts("breakfast")}>Café</button>
+            <button onClick={() => showAllProducts("all-day")}>Lanche</button> */}
 
-           <Logout />
+           <LinkButton />
             <Header />
-            <p> Menu: {products.forEach(product => console.log(product))}</p>
+            {/* <p> Menu: {products.forEach(product => console.log(product))}</p> */}
+            <p> {products.forEach(product => console.log(product))}</p>
             <Menu />
             <Footer />
         </div>

@@ -1,6 +1,5 @@
 
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
-
 import Login from "./Pages/Login";
 import Kitchen from "./Pages/Kitchen"
 import Salon from "./Pages/Salon"

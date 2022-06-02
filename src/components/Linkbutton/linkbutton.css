@@ -10,7 +10,7 @@
 
 .container-logout {
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     padding: 2% 3% 2% 2%;
 }
 

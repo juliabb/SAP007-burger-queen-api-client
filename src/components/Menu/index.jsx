@@ -1,10 +1,10 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 import Button from "../Button"
 import Requests from "../Requests";
 import "./menu.css"
 
 function Menu() {
-const [clientName, setClientName] = useState();
+    const [clientName, setClientName] = useState();
 
     return (
         <div className="container-menu">
@@ -15,16 +15,14 @@ const [clientName, setClientName] = useState();
                 </nav>
             </section>
 
-            <section className="menu">
-                <h2 className="center">Pedido</h2>
-                <p className="left">Mesa X</p>
+            <section className="command">
+                <h2 className="center">Pedido Mesa X</h2>
                 <input className="clientName" type="text"
                     placeholder="Digite o nome do cliente"
                     onChange={e => setClientName(e.target.value)}
                 />
-                {/* <Requests /> */}
-                <p className="left">Nome: {clientName}</p>
-                {/* <Button text="Enviar" /> */}
+                <Requests name={clientName} />
+                <Button text="Enviar" />
 
             </section>
         </div>

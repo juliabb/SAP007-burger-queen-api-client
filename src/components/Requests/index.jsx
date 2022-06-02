@@ -1,11 +1,11 @@
+import "./request.css"
 
-function Requests(clientName) {
+function Requests({name, time}) {
 
     return (
         <div className="card-requests">
-            {/* <p>Tatiane Mendonça</p> */}
-            <p className="left">Nome: {clientName}</p>
-            <small>20:36:24</small>
+            <p className="left">Nome: {name}</p>
+            <small className="left">{time}</small>
         </div>
     )
 }
