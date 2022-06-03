@@ -3,6 +3,8 @@ import Button from "../Button"
 import Requests from "../Requests";
 import "./menu.css"
 import { allProducts } from "../../Pages/services/data";
+import Card from "../Card";
+// import Card from "../Card";
 
 function Menu() {
     const [clientName, setClientName] = useState();
@@ -27,6 +29,12 @@ function Menu() {
                     <Button type="button" text="ALMOÇO" onClick={() => showAllProducts("all-day")} />
                 </nav>
                 <p> Menu: {products.forEach(product => console.log(product))}</p>
+                {/* <Card product={products.forEach((product) => <p>{product}</p>)} /> */}
+                {/* <Card /> */}
+
+
+                {/* <p> Menu: {products.forEach((product) => <li>{product}</li>)}</p> */}
+                {/* <Card product={}/> */}
             </section>
 
             <section className="command">
