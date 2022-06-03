@@ -4,7 +4,6 @@ import Requests from "../Requests";
 import "./menu.css"
 import { allProducts } from "../../Pages/services/data";
 import Card from "../Card";
-// import Card from "../Card";
 
 function Menu() {
     const [clientName, setClientName] = useState();
@@ -15,12 +14,12 @@ function Menu() {
             .then((response) => response.json())
             .then(json => json)
             .then((data) => { setProducts(data.filter((item) => { return item.type === option }),); });
-        // console.log(showAllProducts);
     };
     useEffect(() => {
         showAllProducts("breakfast")
     }, [])
 
+     const item = products.map(product => product)
     return (
         <div className="container-menu">
             <section className="menu">
@@ -28,15 +27,9 @@ function Menu() {
                     <Button type="button" text="CAFÉ DA MANHÃ" onClick={() => showAllProducts("breakfast")} />
                     <Button type="button" text="ALMOÇO" onClick={() => showAllProducts("all-day")} />
                 </nav>
-                <p> Menu: {products.forEach(product => console.log(product))}</p>
-                {/* <Card product={products.forEach((product) => <p>{product}</p>)} /> */}
-                {/* <Card /> */}
 
-
-                {/* <p> Menu: {products.forEach((product) => <li>{product}</li>)}</p> */}
-                {/* <Card product={}/> */}
+                <Card products={item} />
             </section>
-
             <section className="command">
                 <h2 className="center">Pedido Mesa X</h2>
                 <input className="clientName" type="text"
@@ -45,7 +38,6 @@ function Menu() {
                 />
                 <Requests name={clientName} />
                 <Button text="Enviar" />
-
             </section>
         </div>
     )

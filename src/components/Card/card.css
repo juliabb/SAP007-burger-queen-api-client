@@ -1,0 +1,13 @@
+.card{
+    padding: 3% 4%;
+}
+
+.card li{
+    list-style-type: none;
+}
+
+ul{
+    padding: 3%;
+    background-color: aliceblue;
+    margin-top: 1%;
+}
