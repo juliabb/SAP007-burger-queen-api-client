@@ -6,6 +6,7 @@ import Salon from "./Pages/Salon"
 import NoPage from "./Pages/NoPage"
 import Register from "./Pages/Register";
 import Home from "./Pages/Home";
+import Tables from "./Pages/Tables";
 
 const Private = ({ children, redirectTo }) => {
   const isAuthenticated = localStorage.getItem("token") !== null;
@@ -37,6 +38,14 @@ const AppRoutes = () => {
           element={
             <Private redirectTo="/">
               <Salon />
+            </Private>
+          }
+        />
+        <Route
+          path="/tables"
+          element={
+            <Private redirectTo="/">
+              <Tables />
             </Private>
           }
         />

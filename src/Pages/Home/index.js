@@ -10,11 +10,13 @@ function Home() {
         <div>
             <LinkButton />
             <Header />
-           <div className="container">
-           <Link to="/salon" className="salon button">Novo Pedido</Link>
-           <Link to="/kitchen" className="kitchen button">Pedidos Pendentes</Link>
-           <Link to="/salon" className="salon button">Pedidos Entregues</Link>
-           </div>
+            <div className="main-home">
+                <div className="container-home">
+                    <Link to="/salon" className="salon button">Novo Pedido</Link>
+                    <Link to="/kitchen" className="kitchen button">Pedidos Pendentes</Link>
+                    <Link to="/salon" className="salon button">Pedidos Entregues</Link>
+                </div>
+            </div>
             <Footer />
         </div>
     )
