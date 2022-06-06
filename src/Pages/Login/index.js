@@ -12,8 +12,8 @@ const LoginPage = () => {
                 <Imagem nome="Logo-buguer" foto={logo} />
                 <h1 className="h1">Login</h1>
                 <Login />
-                <Footer />
             </div>
+            <Footer />
         </div>
     )
 }
