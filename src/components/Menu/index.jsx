@@ -5,6 +5,7 @@ import "./menu.css"
 import { allProducts } from "../../Pages/services/data";
 import Card from "../Card";
 
+
 function Menu() {
     const [clientName, setClientName] = useState();
     const [products, setProducts] = useState([])
@@ -31,10 +32,9 @@ function Menu() {
                 <Card products={item} />
             </section>
             <section className="command">
-                <h2 className="center">Pedido Mesa X</h2>
+                <h2 className="center">Pedido Mesa {localStorage.getItem("value")}</h2>
                 <input className="clientName" type="text"
-                    placeholder="Digite o nome do cliente"
-                    onChange={e => setClientName(e.target.value)}
+                    placeholder="Digite o nome do cliente" maxLength={38} onChange={e => setClientName(e.target.value)}
                 />
                 <Requests name={clientName} />
                 <Button text="Enviar" />

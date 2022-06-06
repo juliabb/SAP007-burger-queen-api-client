@@ -2,6 +2,7 @@ import Button from "../../components/Button"
 import LinkButton from "../../components/Linkbutton"
 import Header from "../../components/Header"
 import "./tables.css"
+import { useNavigate } from "react-router-dom";
 
 
 // function numberTable(e) {
@@ -10,10 +11,13 @@ import "./tables.css"
 //     }
 
 function Tables() {
+    const navigate = useNavigate()
 
     function numberTable(e) {
         const value =  e.target.value 
             console.log(value)
+            navigate("/salon");
+            localStorage.setItem('value', value);
         }
 
     return (
