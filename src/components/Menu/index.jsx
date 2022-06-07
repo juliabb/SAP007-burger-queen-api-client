@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from "react"
-import Button from "../Button"
+import { useState, useEffect } from "react";
+import Button from "../Button";
 import Requests from "../Requests";
-import "./menu.css"
+import "./menu.css";
 import { allProducts } from "../../Pages/services/data";
 import Card from "../Card";
 
 function Menu() {
     const [clientName, setClientName] = useState();
-    const [products, setProducts] = useState([])
+    const [products, setProducts] = useState([]);
 
     const showAllProducts = (option) => {
         allProducts()
             .then((response) => response.json())
             .then(json => json)
-            .then((data) => { setProducts(data.filter((item) => { return item.type === option }),); });
+            .then((data) => { setProducts(data.filter((item) => { return item.type === option; }),); });
     };
     useEffect(() => {
-        showAllProducts("breakfast")
-    }, [])
+        showAllProducts("breakfast");
+    }, []);
 
     return (
         <div className="container-menu">
@@ -37,7 +37,7 @@ function Menu() {
                 <Button text="Enviar" />
             </section>
         </div>
-    )
+    );
 }
 
-export default Menu
+export default Menu;

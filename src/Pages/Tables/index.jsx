@@ -1,7 +1,7 @@
-import Button from "../../components/Button"
-import LinkButton from "../../components/Linkbutton"
-import Header from "../../components/Header"
-import "./tables.css"
+import Button from "../../components/Button";
+import LinkButton from "../../components/Linkbutton";
+import Header from "../../components/Header";
+import "./tables.css";
 import { useNavigate } from "react-router-dom";
 
 
@@ -11,13 +11,13 @@ import { useNavigate } from "react-router-dom";
 //     }
 
 function Tables() {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     function numberTable(e) {
-        const value = e.target.value
-        console.log(value)
+        const value = e.target.value;
+        console.log(value);
         navigate("/salon");
-        localStorage.setItem('value', value);
+        localStorage.setItem("value", value);
     }
 
     return (
@@ -38,7 +38,7 @@ function Tables() {
                 </section>
             </div>
         </div>
-    )
+    );
 }
 
-export default Tables
+export default Tables;

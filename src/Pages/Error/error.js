@@ -12,8 +12,3 @@ export function Errors(codeError) {
             return "Ocorreu algum erro";
     }
 }
-
-
-
-
-

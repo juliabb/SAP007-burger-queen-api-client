@@ -1,4 +1,4 @@
-import "./footer.css"
+import "./footer.css";
 
 function Footer() {
     return (
@@ -7,6 +7,6 @@ function Footer() {
             <a href="https://github.com/juliabb">Julia Benedicto</a> e&nbsp;
             <a href="https://github.com/Tati-Mendonca">Tatiane Mendonça</a></p>
         </footer>
-    )
+    );
 }
-export default Footer
+export default Footer;

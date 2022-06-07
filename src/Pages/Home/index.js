@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom"
-import Footer from "../../components/Footer"
-import Header from "../../components/Header"
-import LinkButton from "../../components/Linkbutton"
-import Imagem from "../../components/Logo"
-import homer from "../../Pages/Style/Images/homer.png"
-import '../Login/login-page.css'
-import './home-page.css'
+import { Link } from "react-router-dom";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import LinkButton from "../../components/Linkbutton";
+import Imagem from "../../components/Logo";
+import homer from "../../Pages/Style/Images/homer.png";
+import "../Login/login-page.css";
+import "./home-page.css";
 
 function Home() {
     return (
@@ -23,6 +23,6 @@ function Home() {
             </div>
             <Footer />
         </div>
-    )
+    );
 }
-export default Home         
+export default Home;         

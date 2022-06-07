@@ -1,9 +1,9 @@
 
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import Login from "./Pages/Login";
-import Kitchen from "./Pages/Kitchen"
-import Salon from "./Pages/Salon"
-import NoPage from "./Pages/NoPage"
+import Kitchen from "./Pages/Kitchen";
+import Salon from "./Pages/Salon";
+import NoPage from "./Pages/NoPage";
 import Register from "./Pages/Register";
 import Home from "./Pages/Home";
 import Tables from "./Pages/Tables";
@@ -55,6 +55,6 @@ const AppRoutes = () => {
       </Routes>
     </Router>
   );
-}
+};
 
-export default AppRoutes
+export default AppRoutes;

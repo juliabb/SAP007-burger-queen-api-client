@@ -1,4 +1,4 @@
-import "./request.css"
+import "./request.css";
 
 function Requests({name, time}) {
 
@@ -7,7 +7,7 @@ function Requests({name, time}) {
             <p className="left">Nome: {name}</p>
             <small className="left">{time}</small>
         </div>
-    )
+    );
 }
 
-export default Requests
+export default Requests;

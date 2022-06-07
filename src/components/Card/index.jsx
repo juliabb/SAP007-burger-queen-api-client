@@ -1,4 +1,4 @@
-import "./card.css"
+import "./card.css";
 
 function Card({products}) {
     return (
@@ -13,6 +13,6 @@ function Card({products}) {
                 </ul>
             ))}
         </div>
-    )
+    );
 }
-export default Card
+export default Card;

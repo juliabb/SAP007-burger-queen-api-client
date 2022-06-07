@@ -1,7 +1,7 @@
-import Header from "../../components/Header"
-import Footer from "../../components/Footer"
-import Menu from "../../components/Menu"
-import LinkButton from "../../components/Linkbutton"
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import Menu from "../../components/Menu";
+import LinkButton from "../../components/Linkbutton";
 
 function Salon() {
 
@@ -12,7 +12,7 @@ function Salon() {
             <Menu />
             <Footer />
         </div>
-    )
+    );
 }
 
-export default Salon
+export default Salon;

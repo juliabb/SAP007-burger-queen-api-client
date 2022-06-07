@@ -1,8 +1,8 @@
-import logo from "../../Pages/Style/Images/logo-.png"
+import logo from "../../Pages/Style/Images/logo-.png";
 import Register from "../../components/Register";
 import Imagem from "../../components/Logo";
 import Footer from "../../components/Footer";
-import './page-register.css'
+import "./page-register.css";
 
 function RegisterPage() {
     return (
@@ -14,7 +14,7 @@ function RegisterPage() {
                 <Footer />
             </div>
         </div>
-    )
+    );
 }
 
-export default RegisterPage
+export default RegisterPage;

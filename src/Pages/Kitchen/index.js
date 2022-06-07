@@ -1,6 +1,6 @@
-import Footer from "../../components/Footer"
-import Header from "../../components/Header"
-import LinkButton from "../../components/Linkbutton"
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import LinkButton from "../../components/Linkbutton";
 
 function Kitchen() {
     return (
@@ -10,7 +10,7 @@ function Kitchen() {
             <h1>Kitchen</h1>
             <Footer />
         </div>
-    )
+    );
 }
 
-export default Kitchen
+export default Kitchen;

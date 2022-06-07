@@ -1,11 +1,12 @@
-'@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
-import user from '@testing-library/user-event';
+/* eslint-disable no-undef */
+import "@testing-library/jest-dom";
+import { render, screen } from "@testing-library/react";
+import user from "@testing-library/user-event";
 
-describe('Login', () => {
+describe("Login", () => {
 
-      it('should trigger a click function', () => {
-      const text = 'Entrar'
+      it("should trigger a click function", () => {
+      const text = "Entrar";
       const onClick = jest.fn();
       render(<button onClick={onClick}>{text}</button>);
   
