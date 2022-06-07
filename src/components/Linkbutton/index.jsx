@@ -6,12 +6,13 @@ function LinkButton() {
     const navigate = useNavigate()
 
     const handleLogout = () => {
+        localStorage.removeItem("value")
         logout();
         navigate("/");
     }
     return (
         <nav className="container-logout">
-            <Link to="/home">Voltar</Link>
+            <Link to="/home" className="return">Voltar </Link>
             <button onClick={handleLogout} className="logout">Sair</button>
         </nav>
     )

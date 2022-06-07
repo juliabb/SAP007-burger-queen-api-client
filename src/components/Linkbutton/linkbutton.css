@@ -22,3 +22,11 @@
     background: #00c0fa00;
     cursor: pointer;
 }
+
+.return{
+    font-size: 1.4em;
+}
+.return:visited {
+    color: #000;
+
+}

@@ -1,10 +1,33 @@
-.footer{
+.footer {
     width: 100%;
     display: flex;
     justify-content: center;
     background-color: white;
-    padding: 1% 0 1% 0;
+    padding: 0.7% 0 0.7% 0;
     bottom: 0;
-    position: absolute;
-    margin-top: 2em;
+    position: fixed;
+    text-align: center;
+}
+
+@media screen and (max-width:1000px) {
+    footer {
+        text-align: center;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width:768px) {
+    footer {
+        text-align: center;
+        font-size: 1.3em;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    footer {
+        text-align: center;
+        font-size: 1em;
+        font-weight: 600;
+    }
 }

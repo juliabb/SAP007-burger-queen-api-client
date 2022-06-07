@@ -20,7 +20,7 @@ function Menu() {
         showAllProducts("breakfast")
     }, [])
 
-     const item = products.map(product => product)
+    //  const item = products.forEach(product => product)
     return (
         <div className="container-menu">
             <section className="menu">
@@ -28,8 +28,8 @@ function Menu() {
                     <Button type="button" text="CAFÉ DA MANHÃ" onClick={() => showAllProducts("breakfast")} />
                     <Button type="button" text="ALMOÇO" onClick={() => showAllProducts("all-day")} />
                 </nav>
-
-                <Card products={item} />
+                {/* <Card products={item} /> */}
+                <Card products={products} />
             </section>
             <section className="command">
                 <h2 className="center">Pedido Mesa {localStorage.getItem("value")}</h2>

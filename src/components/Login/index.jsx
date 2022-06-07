@@ -29,7 +29,7 @@ function Login() {
                     localStorage.setItem('role', response.role);
 
                     if (response.role === "hall") {
-                        navigate("/salon")
+                        navigate("/home")
                     }
                     else if (response.role === "kitchen") {
                         navigate("/kitchen");
