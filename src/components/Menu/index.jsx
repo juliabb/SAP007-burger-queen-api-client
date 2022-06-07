@@ -5,7 +5,6 @@ import "./menu.css"
 import { allProducts } from "../../Pages/services/data";
 import Card from "../Card";
 
-
 function Menu() {
     const [clientName, setClientName] = useState();
     const [products, setProducts] = useState([])
@@ -20,7 +19,6 @@ function Menu() {
         showAllProducts("breakfast")
     }, [])
 
-    //  const item = products.forEach(product => product)
     return (
         <div className="container-menu">
             <section className="menu">
@@ -28,7 +26,6 @@ function Menu() {
                     <Button type="button" text="CAFÉ DA MANHÃ" onClick={() => showAllProducts("breakfast")} />
                     <Button type="button" text="ALMOÇO" onClick={() => showAllProducts("all-day")} />
                 </nav>
-                {/* <Card products={item} /> */}
                 <Card products={products} />
             </section>
             <section className="command">
