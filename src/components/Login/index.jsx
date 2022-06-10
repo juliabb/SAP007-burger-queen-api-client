@@ -2,6 +2,7 @@ import { useState } from "react";
 import { signIn } from "../../Pages/services/data";
 import { validateEmail, validatePassword } from "../../Pages/Authentication";
 import { Link, useNavigate } from "react-router-dom";
+// import { messageError }  from "../../Pages/Error/error";
 import { Errors } from "../../Pages/Error/error";
 import MessageError from "../Message";
 import "./login.css";
@@ -21,6 +22,9 @@ function Login() {
                 if (response.code === 400) { 
                     const codeError = JSON.parse(response.code);
                     setError(Errors(codeError));
+                    // console.log(codeError);
+                    // setError(messageError(codeError));
+                    // console.log(messageError);
                 }
                 else {
                     localStorage.setItem("token", response.token);

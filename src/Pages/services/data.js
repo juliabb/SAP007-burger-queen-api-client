@@ -46,3 +46,14 @@ export const allProducts = () => {
   });
 };
 
+export const createOrders = () => {
+  return fetch("https://lab-api-bq.herokuapp.com/orders", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": getToken(),
+    },
+    body: JSON.stringify(),
+  });
+};
+

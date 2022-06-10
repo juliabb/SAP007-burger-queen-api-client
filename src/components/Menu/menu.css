@@ -32,15 +32,12 @@ h2 {
   padding: 2%;
 }
 
-.left{
-padding: 0 0 3% 3%;
-}
-
 .navbar {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.297);
   overflow: auto;
   border-radius: 10px 10px 0 0;
+  margin-bottom: 1.5em; 
 }
 
 .navbar button {
@@ -79,6 +76,17 @@ padding: 0 0 3% 3%;
   background-color: yellow;
   font-weight: 700;
   border: none;
+}
+.card-requests {
+  height: 60%;
+  width: 90%;
+  background-color: white;
+  padding: 4%;
+  border-radius: 5px;
+}
+.trash {
+  float: right;
+  /* margin-right: 1em; */
 }
 
 @media screen and (max-width:1000px) {

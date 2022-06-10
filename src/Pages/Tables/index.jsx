@@ -4,12 +4,6 @@ import Header from "../../components/Header";
 import "./tables.css";
 import { useNavigate } from "react-router-dom";
 
-
-// function numberTable(e) {
-//     const value =  e 
-//         console.log(value)
-//     }
-
 function Tables() {
     const navigate = useNavigate();
 
