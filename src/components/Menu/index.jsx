@@ -40,6 +40,7 @@ function Menu() {
 
     function clearOrder() { // apagar pedido 
         setClientName("");
+        setCart("");
         localStorage.removeItem("count");
         localStorage.removeItem("product");
     }
@@ -86,8 +87,7 @@ function Menu() {
                 />
                 <div className="card-requests">
                     <p className="left">Nome: {clientName}</p>
-                    <p>{ }</p>
-                    <p>{cart}</p>
+                    <p className="space">{cart}</p>
 
                     <FaTrashAlt className="trash" onClick={clearOrder} />
                 </div>

@@ -109,6 +109,11 @@ ul{
   margin: 0 1%;
 }
 
+.space{
+  word-wrap: break-word;
+  
+}
+
 @media screen and (max-width:1000px) {
 
   .container-menu {
