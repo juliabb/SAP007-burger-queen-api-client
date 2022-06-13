@@ -46,14 +46,23 @@ export const allProducts = () => {
   });
 };
 
-export const createOrders = () => {
+export const createOrders = (cliente, table) => {
   return fetch("https://lab-api-bq.herokuapp.com/orders", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       "Authorization": getToken(),
     },
-    body: JSON.stringify(),
+    body: JSON.stringify({
+      cliente: cliente,
+      table: table,
+      // products: [
+      //   {
+      //     "id": 31,
+      //     "qtd": 2
+      //   }
+      // ]
+    })
   });
 };
 
