@@ -111,7 +111,11 @@ ul{
 
 .space{
   word-wrap: break-word;
-  
+  font-size: 1.2em;
+}
+
+.left{
+  font-size: 1.2em;
 }
 
 @media screen and (max-width:1000px) {

@@ -9,6 +9,7 @@ function Menu() {
     const [clientName, setClientName] = useState();
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
+    const [table, setTable] = useState();
 
     const showAllProducts = (option) => {
         allProducts()
@@ -18,21 +19,9 @@ function Menu() {
     };
     useEffect(() => {
         showAllProducts("breakfast");
+        setTable(localStorage.getItem("value"));
     }, []);
 
-    // useEffect(() => {
-    // }, [client, table, order]);
-
-
-    // const chooseProduct = (e) => {
-    // 	setProductSelected({
-    // 		name: e.target.value,
-    // 		price: e.target.getAttribute("price"),
-    // 		quantity: 1,
-    // 		flavor: e.target.value,
-    // 		// complement: null,
-    // 	});
-    // };
 
     function sentToKitchen() {
         alert("Pedido enviado para cozinha com sucesso!");
@@ -49,19 +38,33 @@ function Menu() {
     const onChangeClient = (e) => { // guarda nome cliente
         const name = e.target.value;
         setClientName(name);
+
     };
 
 
+   localStorage.getItem("product"); //pega produto localstorage
+//    JSON.parse(product);
 
-    let product = localStorage.getItem("product"); //pega produto localstorage
-    JSON.parse(product);
+
+
+// const sum = function(preco) {return preco + preco;};
+
 
 
     function addItemToCart(product) {
+        setCart([...cart, product.name, product.price]); 
+     }
 
-        setCart([...cart, product.name, product.price]);
-        console.log(product);
-    }
+    //  function verificarPreco(preco) {
+    //      sum();
+    //     return preco;
+    //   }
+
+    // const preco = cart.filter(verificarPreco);
+    // for (var i = 0; i < preco.length; i++) {
+    //     preco[i] += preco;
+    //   }
+   
 
     return (
         <div className="container-menu">
@@ -74,21 +77,19 @@ function Menu() {
                     return (
                         <Card key={product.id}
                             product={product}
-                            addItemToCart={addItemToCart}
-                        // count={count}
+                            onClick={addItemToCart}
                         />
                     );
                 })}
             </section>
             <section className="command">
-                <h2 className="center">Pedido Mesa {localStorage.getItem("value")}</h2>
+                <h2 className="center">Pedido Mesa Nº{table}</h2>
                 <input className="clientName" type="text"
                     placeholder="Digite o nome do cliente" maxLength={38} onChange={onChangeClient}
                 />
                 <div className="card-requests">
                     <p className="left">Nome: {clientName}</p>
                     <p className="space">{cart}</p>
-
                     <FaTrashAlt className="trash" onClick={clearOrder} />
                 </div>
                 <Button text="Finalizar" onClick={sentToKitchen} />
