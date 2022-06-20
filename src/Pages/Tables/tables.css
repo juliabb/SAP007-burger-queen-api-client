@@ -1,0 +1,62 @@
+.table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tables {
+    padding: 2%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 3em;
+}
+
+.ordertable {
+    text-align: center;
+    padding: 2%;
+    font-size: 1.8em;
+}
+
+.btn {
+    padding: 1em 5em;
+    background-color: white;
+    font-weight: 600;
+    font-size: larger;
+    margin: 0.8em 0;
+    border-radius: 100px;
+    border: none;
+}
+
+@media (min-width: 769px) and (max-width: 1040px) {
+    .tables {
+        height: 80vh;
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 768px) {
+    .tables {
+        height: 80vh;
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+@media (min-width: 200px) and (max-width: 399px) {
+    .tables {
+        height: 78vh;
+        flex-direction: column;
+        gap: 0;
+    }
+    .btn {
+        padding: 1em 4em;
+        margin: 0.5em 0;
+    }
+    .ordertable{
+        font-size: 1.4em;
+        padding: 0 4%;
+    }
+}

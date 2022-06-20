@@ -1,9 +1,6 @@
-// import './button.css'
-// import { validate } from '../../Pages/Authentication'
-
-// function Button() {
-//     return (
-//         <button onclick={validate} className="button">Entrar</button>
-//     )
-// } 
-// export default Button
+function Button({ type, text, onClick, value, className}) {
+	return (
+		<button type={type} onClick={onClick} className={className} value={value}>{text}</button>
+	);
+} 
+export default Button;

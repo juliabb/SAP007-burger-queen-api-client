@@ -12,10 +12,14 @@ body{
 
 .buttonSubmit{
     width: 85%;
-    padding: 5%;
+    padding: 4%;
     border-radius: 50px;
     border: none;
     color: #fff;
     background: #000;
     font-size: 1em;
+}
+
+.center{
+    text-align: center;
 }

@@ -1,0 +1,9 @@
+.basic input{
+    padding: 2%;
+    border-radius: 5px;
+    width: 70%;
+}
+
+.basic label{
+    padding-left: 10px;
+}

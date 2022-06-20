@@ -1,0 +1,163 @@
+.container-menu {
+  display: flex;
+  margin: 1% 4%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  align-content: center;
+  gap: 8%;
+  flex-wrap: wrap-reverse;
+}
+
+.menu {
+  background-color: rgba(255, 255, 255, 0.297);
+  width: 40%;
+  height: 64vh;
+  border-radius: 10px;
+  align-items: center;
+  overflow: auto;
+}
+
+.command {
+  background-color: rgba(255, 255, 255, 0.297);
+  width: 40%;
+  height: 64vh;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h2 {
+  padding: 2%;
+}
+
+.navbar {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.297);
+  overflow: auto;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 1.5em; 
+}
+
+.navbar button {
+  float: left;
+  padding: 3%;
+  color: yellow;
+  text-shadow: #000 1px -1px, #000 -1px 1px, #000 1px 1px, #000 -1px -1px;
+  font-weight: 700;
+  letter-spacing: .1rem;
+  text-decoration: none;
+  width: 50%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.297);
+  border: none;
+}
+
+.navbar button:hover {
+  background-color: rgba(0, 0, 0, 0.352);
+}
+
+.navbar button.active {
+  background-color: rgba(0, 0, 0, 0.352);
+}
+
+.clientName {
+  padding: 2%;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.command button{
+  width: 90%;
+  padding: 9px;
+  margin-top: 2%;
+  border-radius: 5px;
+  background-color: yellow;
+  font-weight: 700;
+  border: none;
+}
+.card-requests {
+  height: 60%;
+  width: 90%;
+  background-color: white;
+  padding: 4%;
+  border-radius: 5px;
+}
+.trash {
+  float: right;
+  /* margin-right: 1em; */
+}
+
+.card{
+  margin-top: 0.3em;
+  padding: 0 4% 0 4%;
+}
+
+li{
+  list-style-type: none;
+}
+
+ul{
+  padding: 3%;
+  background-color: aliceblue;
+  margin: 1% 0%;
+}
+
+.right{
+  float: right;
+  margin: 0 1%;
+}
+
+.space{
+  word-wrap: break-word;
+  font-size: 1.2em;
+}
+
+.left{
+  font-size: 1.2em;
+}
+
+@media screen and (max-width:1000px) {
+
+  .container-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .menu {
+    width: 80%;
+  }
+  
+  .command {
+    width: 80%;
+  }
+
+}
+
+
+@media screen and (max-width:768px) {
+
+  .container-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+.menu {
+  width: 80%;
+}
+
+.command {
+  width: 80%;
+}
+
+}
+
+@media screen and (max-width: 450px) {
+
+button{
+    font-size: 0.7em;
+  }
+
+}

@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { signIn } from "../../Pages/services/data";
 import { validateEmail, validatePassword } from "../../Pages/Authentication";
 import { Link, useNavigate } from "react-router-dom";
-import { Errors } from "../../Pages/Error/error"
+// import { messageError }  from "../../Pages/Error/error";
+import { Errors } from "../../Pages/Error/error";
 import MessageError from "../Message";
-import './login.css'
+import "./login.css";
 
 function Login() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const buttonSubmit = (e) => {
         e.preventDefault();
@@ -19,23 +20,26 @@ function Login() {
         signIn(email, password)
             .then((response) => {
                 if (response.code === 400) { 
-                    const codeError = JSON.parse(response.code)
-                    setError(Errors(codeError))
+                    const codeError = JSON.parse(response.code);
+                    setError(Errors(codeError));
+                    // console.log(codeError);
+                    // setError(messageError(codeError));
+                    // console.log(messageError);
                 }
                 else {
-                    localStorage.setItem('token', response.token);
-                    localStorage.setItem('id', response.id);
-                    localStorage.setItem('email', response.email);
-                    localStorage.setItem('role', response.role);
+                    localStorage.setItem("token", response.token);
+                    localStorage.setItem("id", response.id);
+                    localStorage.setItem("email", response.email);
+                    localStorage.setItem("role", response.role);
 
                     if (response.role === "hall") {
-                        navigate("/salon")
+                        navigate("/home");
                     }
                     else if (response.role === "kitchen") {
                         navigate("/kitchen");
                     }                    
                 }
-            }).catch((error) => console.log(error))
+            }).catch((error) => console.log(error));
     };
 
     const validate = () => {
@@ -55,7 +59,7 @@ function Login() {
             <button onClick={validate} className="buttonSubmit">Entrar</button>
             <p>Não possui conta? <Link to="/register" className="register">Cadastre-se</Link></p>
         </form>
-    )
+    );
 }
 
-export default Login
+export default Login;

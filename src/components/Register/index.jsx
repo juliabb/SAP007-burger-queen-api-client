@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { createNewUser } from "../../Pages/services/data"
+import { useState } from "react";
+import { createNewUser } from "../../Pages/services/data";
 import { useNavigate } from "react-router-dom";
 import { validateEmail, validatePassword } from "../../Pages/Authentication";
-import './register.css'
+import "./register.css";
 
 
 function FormRegister() {
@@ -11,7 +11,7 @@ function FormRegister() {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [role, setRole] = useState("");
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const buttonSubmit = (e) => {
     e.preventDefault();
@@ -21,22 +21,22 @@ function FormRegister() {
         if (response.code === 403) {
           console("Email já cadastrado!");
         } else {
-          localStorage.setItem('token', response.token);
-          localStorage.setItem('id', response.id);
-          localStorage.setItem('email', response.email);
-          localStorage.setItem('role', response.role);
+          localStorage.setItem("token", response.token);
+          localStorage.setItem("id", response.id);
+          localStorage.setItem("email", response.email);
+          localStorage.setItem("role", response.role);
 
           if (response.role === "hall") {
-            navigate("/salon")
+            navigate("/salon");
           }
           else if (response.role === "kitchen") {
-            navigate("/kitchen")
+            navigate("/kitchen");
           }
         }
       })
-      .catch((errors) => errors )
+      .catch((errors) => errors );
 
-  }
+  };
 
   const validate = () => {
     if (!validateEmail(email)) {
@@ -60,7 +60,7 @@ function FormRegister() {
       <input type="password" placeholder="Senha" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
       <button onClick={validate} className="buttonSubmit">Entrar</button>
     </form>
-  )
+  );
 }
 
-export default FormRegister
+export default FormRegister;

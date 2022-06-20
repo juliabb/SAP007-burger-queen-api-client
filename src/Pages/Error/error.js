@@ -13,7 +13,27 @@ export function Errors(codeError) {
     }
 }
 
+// export const messageError = {
+//     "400": "Dados inválidos ou ausentes",
+//     "401": "Usuário não encontrado",
+//     "403": "Acesso negado, tente outro e-mail",
+//     "404": "Usuário não encontrado",
+//     // "default": "Ocorreu algum erro",
+// };
 
-
-
-
+// export const messageError = {
+//     "400": "Dados inválidos ou ausentes"
+//      },
+//      {
+//     "401": "Usuário não encontrado"
+//      },
+//     {
+//     "403": "Acesso negado, tente outro e-mail"
+//      },
+//      {
+//     "404": "Usuário não encontrado"
+//      },
+//      {
+//     "default": "Ocorreu algum erro",
+//      },
+//      };

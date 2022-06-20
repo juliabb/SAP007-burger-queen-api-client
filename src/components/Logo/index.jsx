@@ -1,8 +1,8 @@
-import './logo.css'
+import "./logo.css";
 
- function Imagem({nome, foto}) {
+ function Imagem({nome, foto, className}) {
     return(
-        <img src={foto} alt={nome} className='logo-hommer' />
-    )
+        <img src={foto} alt={nome} className={className} />
+    );
 } 
-export default Imagem
+export default Imagem;
