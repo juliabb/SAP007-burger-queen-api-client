@@ -1,70 +1,145 @@
-# Getting Started with Create React App
+# Mr Simpsons
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Índice
 
-## Available Scripts
+- [Índice](#índice)
+- [1. Introdução](#1-introdução)
+- [2. Resumo do projeto](#2-resumo-do-projeto)
+- [3. Protótipo](#3-protótipo)
+- [4. Paleta de Cores](#4-paleta-de-cores)
+- [5. História de Usuário](#5-história-de-usuário)
+- [6. Tecnologias Utilizadas](#6-tecnologias-utilizadas)
+- [7. Como usar](#7-como-usar)
+- [8. Desenvolvedoras](#8-desenvolvedoras)
 
-In the project directory, you can run:
+## 1. Introdução
 
-### `npm start`
+**Mr Simpsons** é uma pequena hamburgueria que está crescendo e para otimizar o atendimento foi desenvolvido uma interface para realizar os pedidos.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Você pode acessar a aplicação [AQUI](https://mr-simpsons.netlify.app/).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Para acessar, você pode utilizar o usuário e senha abaixo:
 
-### `npm test`
+> | Usuário                 | Senha  |
+> | ---------------------- | ------ |
+> | atende@simpsons.com  | 123456 |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+![The Lord of the Burgers](./src/Pages/Style/Images/logo-.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 2. Resumo do projeto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Mr Simpsons** tem uma interface em que se possa realizar pedidos utilizando um _tablet_, e enviá-los
+para a cozinha para que sejam preparados de forma ordenada e eficiente.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Este projeto tem duas áreas: interface (cliente) e API (servidor). Nosso cliente nos pediu para desenvolver uma interface que se integre com a API.
 
-### `npm run eject`
+Estas são as informações que temos do cliente:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+> Somos **Mr Simpsons**, um fast food 24hrs.
+>
+>A nossa proposta de serviço 24 horas foi muito bem recebida e, para continuar a
+>crescer, precisamos de um sistema que nos ajude a receber pedidos de nossos
+>clientes.
+>
+>Nós temos 2 menus. Um muito simples para o café da manhã:
+>
+>| Ítem                      |Preço R$|
+>|---------------------------|------|
+>| Café americano            |    5 |
+>| Café com leite            |    7 |
+>| Sanduíche de presunto e queijo|   10 |
+>| Suco de fruta natural     |    7 |
+>
+>E outro menu para o resto do dia:
+>
+>| Ítem                      |Preço |
+>|---------------------------|------|
+>|**Hambúrgueres**           |   **R$**   |
+>|Hambúrguer simples         |    10|
+>|Hambúrguer duplo           |    15|
+>|**Acompanhamentos**        |   **R$**   |
+>|Batata frita               |     5|
+>|Anéis de cebola            |     5|
+>|**Bebidas**                |   **R$**   |
+>|Água 500ml                 |     5|
+>|Água 750ml                 |     7|
+>|Bebida gaseificada 500ml   |     7|
+>|Bebida gaseificada 750ml   |    10|
+>
+> **Importante:** Os clientes podem escolher entre hambúrgueres de carne bovina,
+> frango ou vegetariano. Além disso, por um adicional de R\$ 1,00 , eles podem
+> adicionar queijo **ou** ovo.
+>
+>Nossos clientes são bastante indecisos, por isso é muito comum que eles mudem o
+>seu pedido várias vezes antes de finalizar.
+A interface mostra os dois menus (café da manhã e restante do dia), cada
+um com todos os seus _produtos_. O usuário deve poder escolher que _produtos_
+adicionar e a interface deve mostrar o _resumo do pedido_ com o custo total.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 3. Protótipo
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Para criação dos Protótipos desenvolvido na ferramenta Figma.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Tablet 
+<img src="./src/Pages/Style/Images/prototipo-login-home.png" alt="protótipo alta fidelidade" />
+<img src="./src/Pages/Style/Images/prototipo-mesa-menu.png" alt="protótipo alta fidelidade" />
 
-## Learn More
+## 4. Paleta de Cores
+<img src="./src/Pages/Style/Images/paleta-cores.jpg" alt="protótipo alta fidelidade" />
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 5. História de Usuário
+<img src="./src/Pages/Style/Images/historia-usuario-01.png" alt="protótipo alta fidelidade" />
+<img src="./src/Pages/Style/Images/historia-usuario-02.png" alt="protótipo alta fidelidade" />
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 6. Tecnologias Utilizadas
+- HTML;
+- CSS;
+- ReactJS;
+- Notion;
+- Figma;
+- NodeJS;
+- Git e GitHub;
+- Netlify;
 
-### Code Splitting
+## 7. Como usar
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Você precisará usar o Node.js
 
-### Analyzing the Bundle Size
+Clonar o projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+` $ git clone https://git@github.com:juliabb/SAP007-burger-queen-api-client.git`
 
-### Making a Progressive Web App
+Instalar as dependências do projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+` $ npm install or yarn`
 
-### Advanced Configuration
+Iniciar a aplicação
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+` $ npm start or yarn start`
 
-### Deployment
+Realizar os testes unitários
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+` $ npm test or yarn test`
 
-### `npm run build` fails to minify
+Criar o aplicativo para produção
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+` $ npm run build or yarn build`
+
+## 8. Desenvolvedoras
+<table>
+  <tr>
+    <td>
+      <img src="https://avatars.githubusercontent.com/u/68789655?v=4" height="150px" alt="foto-julia-benedicto">
+      <p align="center">
+        <a href="https://www.linkedin.com/in/julia-benedicto/" _blank>Julia Benedicto</a>
+      </p>
+    </td>
+    <td>
+      <img src="https://avatars.githubusercontent.com/u/97405991?v=4" height="150px" alt="foto-tati-mendonca">
+      <p align="center">
+        <a href="https://www.linkedin.com/in/tati-mendonca/" _blank>Tatiane Mendonça</a>
+      </p>
+    </td>
+  </tr>
+</table>
