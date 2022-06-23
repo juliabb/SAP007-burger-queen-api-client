@@ -12,6 +12,9 @@
 - [7. Como usar](#7-como-usar)
 - [8. Desenvolvedoras](#8-desenvolvedoras)
 
+<br>
+
+ 
 ## 1. Introdução
 
 **Mr Simpsons** é uma pequena hamburgueria que está crescendo e para otimizar o atendimento foi desenvolvido uma interface para realizar os pedidos.
@@ -20,12 +23,22 @@ Você pode acessar a aplicação [AQUI](https://mr-simpsons.netlify.app/).
 
 Para acessar, você pode utilizar o usuário e senha abaixo:
 
+<br>
+
 > | Usuário                 | Senha  |
 > | ---------------------- | ------ |
 > | atende@simpsons.com  | 123456 |
 
+<br>
+
+## Status ⌛
+[![Generic badge](https://img.shields.io/badge/Projeto%20em-Desenvolvimento-blue)](https://shields.io/) 
+
+<br>
 
 ![The Lord of the Burgers](./src/Pages/Style/Images/logo-.png)
+
+<br>
 
 ## 2. Resumo do projeto
 
@@ -77,20 +90,29 @@ A interface mostra os dois menus (café da manhã e restante do dia), cada
 um com todos os seus _produtos_. O usuário deve poder escolher que _produtos_
 adicionar e a interface deve mostrar o _resumo do pedido_ com o custo total.
 
+<br>
+
 ## 3. Protótipo
 
-Para criação dos Protótipos desenvolvido na ferramenta Figma.
+Para criação dos Protótipos desenvolvido na ferramenta [Figma](https://www.figma.com/file/5ZZ7yC1CMRTZYWDjNwMOrp/Figma-Basics?node-id=0%3A286).
 
 ## Tablet 
 <img src="./src/Pages/Style/Images/prototipo-login-home.png" alt="protótipo alta fidelidade" />
 <img src="./src/Pages/Style/Images/prototipo-mesa-menu.png" alt="protótipo alta fidelidade" />
 
+<br>
+
+
 ## 4. Paleta de Cores
 <img src="./src/Pages/Style/Images/paleta-cores.jpg" alt="protótipo alta fidelidade" />
+
+<br>
 
 ## 5. História de Usuário
 <img src="./src/Pages/Style/Images/historia-usuario-01.png" alt="protótipo alta fidelidade" />
 <img src="./src/Pages/Style/Images/historia-usuario-02.png" alt="protótipo alta fidelidade" />
+
+<br>
 
 ## 6. Tecnologias Utilizadas
 - HTML;
@@ -101,6 +123,8 @@ Para criação dos Protótipos desenvolvido na ferramenta Figma.
 - NodeJS;
 - Git e GitHub;
 - Netlify;
+
+<br>
 
 ## 7. Como usar
 
@@ -125,6 +149,8 @@ Realizar os testes unitários
 Criar o aplicativo para produção
 
 ` $ npm run build or yarn build`
+
+<br>
 
 ## 8. Desenvolvedoras
 <table>
