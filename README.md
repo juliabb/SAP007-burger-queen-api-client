@@ -1,5 +1,9 @@
 # Mr Simpsons
 
+## Status ⌛
+[![Generic badge](https://img.shields.io/badge/Projeto%20em-Desenvolvimento-blue)](https://shields.io/) 
+
+
 ## Índice
 
 - [Índice](#índice)
@@ -28,11 +32,6 @@ Para acessar, você pode utilizar o usuário e senha abaixo:
 > | Usuário                 | Senha  |
 > | ---------------------- | ------ |
 > | atende@simpsons.com  | 123456 |
-
-<br>
-
-## Status ⌛
-[![Generic badge](https://img.shields.io/badge/Projeto%20em-Desenvolvimento-blue)](https://shields.io/) 
 
 <br>
 
